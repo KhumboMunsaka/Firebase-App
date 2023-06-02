@@ -4,6 +4,8 @@
   --grey: #dce1eb;
   --lighter-grey: #fdfdfd;
   --light-red: #ac485a;
+  --whitish: #fffdf8;
+  --tan: #ffecc7;
 }
 
 * {
@@ -12,7 +14,7 @@
 }
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: var(--theme-color);
+  user-select: none;
 }
 input {
   color: var(--dark-red);
@@ -21,10 +23,16 @@ input {
 button {
   color: var(--lighter-grey);
   background-color: var(--light-red);
+  transition: ease-in-out;
+}
+button:hover {
+  background-color: var(--dark-red);
+  transition: 100ms ease-in-out;
 }
 
 .container {
-  margin: 10em auto auto auto;
+  margin: 1em auto auto auto;
+  background-color: #eef0f4;
   padding: 4em 1em 2em 1em;
   width: 80%;
   border: rgb(0, 0, 0) 3px solid;
@@ -36,6 +44,8 @@ button {
 
 .container button,
 .container input {
+  flex-grow: 1;
+
   width: 90%;
   max-width: 15em;
   padding: 1em;
@@ -44,4 +54,31 @@ button {
   margin-top: 0.5em;
   border: none;
   border-radius: 15px;
+}
+
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  gap: 10px;
+  transition: ease-in-out;
+}
+.container ul:hover {
+  background-color: var(--tan);
+  transition: 100ms ease-in-out;
+}
+.container li {
+  list-style-type: none;
+  margin: 0.3em;
+  padding: 1em;
+  flex-grow: 1;
+  border-radius: 15px;
+  text-align: center;
+  background-color: var(--whitish);
+  box-shadow: opx 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.noItem:hover {
+  background-color: var(--theme-color);
 }
