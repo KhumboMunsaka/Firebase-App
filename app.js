@@ -30,7 +30,8 @@ onValue(itemsInBasket, function (snapshot) {
       appendItemToBasket(currentItem);
     }
   } else {
-    shoppingList.innerHTML = '<p class="noItem">No items in your basket yet :(</p> ';
+    shoppingList.innerHTML =
+      '<p class="noItem">No items in your basket yet :(</p> ';
   }
 });
 

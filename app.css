@@ -64,7 +64,7 @@ button:hover {
   gap: 10px;
   transition: ease-in-out;
 }
-.container ul:hover {
+.container li:hover {
   background-color: var(--tan);
   transition: 100ms ease-in-out;
 }
