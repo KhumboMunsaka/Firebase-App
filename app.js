@@ -46,7 +46,7 @@ const appendItemToBasket = function (item) {
   newEl.textContent = `${itemValue}`;
   shoppingList.append(newEl);
   // for deleting an item in the basket
-  newEl.addEventListener('dblclick', function () {
+  newEl.addEventListener('click', function () {
     let exactLocationOfItem = ref(database, `items-in-basket/${itemId}`);
     remove(exactLocationOfItem);
   });
